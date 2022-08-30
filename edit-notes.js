@@ -9,7 +9,7 @@ const noteId = location.hash.substring(1)
 let notes = getSavedNotes()
 let note = notes.find((item) => item.id === noteId)
 if(!note){
-    location.assign('/index.html')
+    location.assign('index.html')
 }
 lastUpdate.textContent = `Last edit was ${moment(note.updatedAt).fromNow()}`
 title.value = note.title
@@ -33,7 +33,7 @@ body.addEventListener('input',(e) => {
 removeBtn.addEventListener('click',() => {
     removeNote(note.id)
     saveNotes(notes)
-    location.assign('/index.html')
+    location.assign('index.html')
 })
 
 window.addEventListener('storage', (e) => {
@@ -41,7 +41,7 @@ window.addEventListener('storage', (e) => {
         notes = JSON.parse(e.newValue)
         const note = notes.find((item) => item.id === noteId)
         if(!note){
-            location.assign('/index.html')
+            location.assign('index.html')
         }
         title.value = note.title
         body.value = note.body

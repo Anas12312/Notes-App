@@ -18,7 +18,7 @@ document.querySelector('#create-note').addEventListener('click',(e) => {
     notes.push(newNote)
     saveNotes(notes)
     renderNotes(notes, filters)
-    location.assign(`/edit.html#${newNote.id}`)
+    location.assign(`edit.html#${newNote.id}`)
 })
 
 document.querySelector('#search-text').addEventListener('input',(e) => {

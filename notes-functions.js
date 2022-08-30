@@ -41,7 +41,7 @@ const generateNoteDOM = (note) => {
     
 
     // Setup the link
-    noteEl.setAttribute('href',`/edit.html#${note.id}`)
+    noteEl.setAttribute('href',`edit.html#${note.id}`)
     noteEl.classList.add('list-item')
 
     // Setup the last edited message
